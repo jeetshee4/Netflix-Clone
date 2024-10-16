@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+/* For the Font of the text */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+   background-color: black;
+}
+
+
+.main{
+   background-image: url("assets/background.jpg");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: max(1000px ,100vw); 
+   /* to give a Zoom in Effect of the bacground Picture */
+   height:70vh;
+   position: relative;
+}
+ .main .box{
+   height: 70vh;
+   width: 100%;
+   opacity: 0.54;  
+   /* Opacity means a darkish effect on the image.The more opacity,the more darking shade on the image */
+   top:0;
+   background-color: black;
+   position: absolute;
+}
+
+nav{
+   max-width: 80vw;
+   display: flex;
+   margin: auto;
+   /* flex-direction: row; */
+   justify-content: space-between;
+   align-items: center;
+   height: 62px;
+}
+
+nav img{
+   
+   /* My own adjustment.May remove it later */
+   width:114px;
+   position :relative;
+   z-index: 100; 
+   /* to make the logo more vibrant  */
+}
+
+nav button{
+   position: relative;
+   z-index:20;
+   margin: 5px;
+}
+
+/* Hero is the block just after the nav block,and it consists mainly the three lines and the Email box */
+.hero {
+   /* as parent's height is set we can give it's height by % */
+   font-family: "Martel Sans", sans-serif;
+   height: calc(100% - 62px) ;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color:white;
+   position: relative;
+   gap: 23px; 
+   /* For gaps between children  */
+
+   padding:0 30px;
+   /* To make the website responsive */
+}
+
+.hero> :first-child{
+   font-weight: 900;
+   font-size: 48px;
+   text-align: center;
+}
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+   font-weight: 400;
+   font-size: 20px;
+   text-align: center;
+}
+
+/* Here the > symbol is important because if you will write only .hero :first-child ,then this <input> tag that is 
+the first child of its own parent will get big as 48px too.So to imdicate immediate first child ,2nd,3rd child we need to say that > Symbol */
+
+/* My own Effort to fix the input and and the Button */
+/* .hero input {
+   width: 250px;
+   height: 30px;
+}
+.hero button{
+   height: 20px;
+   padding: 1px;
+   background-color: red;
+   color:white;
+   border: 0px;
+   border-radius: 3px;
+} */
+
+
+.separation{
+   background-color: rgb(48, 47, 47);
+   height: 7px;
+}
+
+/* TO Adjust the two buttons in Hero class we need to make a flex box for those two buttons */
+.hero-buttons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+}
+
+
+
+.btn{
+  padding:3px 8px;
+  font-weight: 400;
+  background-color: rgba(23, 23, 23, 0.7);
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-red-sm {
+   background-color: rgb(224, 20, 20);
+   color: white;
+   
+}
+
+.btn-red-btn {
+   background-color: rgb(232, 16, 16);
+   color: white;
+   padding: 3px 24px;
+   font-size: 20px;
+   border-radius: 4px;
+}
+
+.main input{
+   padding: 6px 72px 6px 9px;
+   color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+.first {
+
+   display: flex;
+   justify-content: center;
+   max-width: 70vw;
+   color: white;
+   align-items: center;
+  
+   margin: auto;
+}
+
+@media screen and  (max-width: 1500px)
+{
+
+   .first {
+      flex-wrap: wrap;
+   }
+}
+
+.secImg {
+   position: relative;
+}
+.secImg img{
+max-width: 555px;
+max-height: 310px;
+position:relative;
+z-index: 10;
+right: 0;
+
+
+}
+
+.secImg video{
+position: absolute;
+/* top: 51px; */
+/* right: 0; */
+right:71px;
+top: 55px;
+width: 277px; 
+}
+
+section.first > div {
+   display: flex;
+   flex-direction: column;
+   padding: 34px 0;
+   
+}
+
+
+
+section.first > div :nth-child(1) {
+
+   font-size: 48px;
+   font-weight: bolder; 
+}
+
+section.first > div :nth-child(2) {
+
+   font-size: 24px;
+   font-weight: bolder; 
+}
+.faq h1{
+   text-align: center;
+   font-size: 48px;
+}
+
+
+.faq {
+   background-color: black;
+   color: white;
+   padding: 34px;
+}
+
+
+/* This to change color of faqbox when hover */
+.faqbox:hover {
+   background-color: gray;
+}
+.faqbox svg{
+   filter: invert(1);
+}
+.faqbox {
+   transition: all 1s ease-out;
+   
+   font-size: 24px;
+ display:flex;
+ background-color: #2d2d2d;
+ padding: 24px;
+ max-width: 60vw;
+ margin: 34px auto;
+ justify-content: space-between;
+ cursor: pointer;
+ 
+}
+footer {
+   color: white;
+   max-width: 60vw;
+   margin: auto;
+   padding: 34px;
+}
+.footer {
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   color: white;
+
+
+
+}
+
+@media screen and  (max-width: 1300px)
+{
+   .footer {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      
+   
+   
+   
+   }
+   
+   
+}
+
+.footer a{
+   color: white;
+   font-size: 14px;
+}
+.Questions {
+
+   padding: 34px 0;
+}
+
+.footer-item {
+   
+   display: flex;
+   flex-direction: column;
+   gap: 23px; 
+   /* A pretty easy way to give gap between elements */
+}
